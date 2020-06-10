@@ -1,0 +1,177 @@
+.main-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 57px;
+  
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+
+.forecast {
+  width: 60%;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  border-radius: 2%;
+  padding: 5px;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.title__city {
+  width: 100%;
+  font-weight: bold;
+  font-size: 4.4rem;
+  line-height: 5.4rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title__date {
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+}
+
+.today {
+  display: flex;
+  position: relative;
+}
+
+.today__temperature {
+  position: relative;
+  font-weight: bold;
+  font-size: 30rem;
+  line-height: 37rem;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 500px) {
+    margin-bottom: 80px;
+  }
+
+    &::after {
+      content: '°';
+      font-weight: bold;
+      font-size: 16rem;
+      text-transform: uppercase;
+      position: absolute;
+      top: -50px;
+    }
+}
+
+.today__description {
+  position: absolute;
+  width: 30%;
+  font-size: 2.2rem;
+  line-height: 3.7rem;
+  font-weight: bold;
+  right: 0;
+  top: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    text-align: center;
+    top: 220px;
+  }
+}
+
+.today__condition {
+  text-transform: uppercase;
+}
+
+.today__image {
+  position: absolute;
+  width: 160px;
+  left: 330px;
+  top: -30px;
+
+  @media screen and (max-width: 1024px) {
+    left: 250px;
+  }
+  
+  @media screen and (max-width: 500px) {
+    left: 115px;
+  }
+}
+
+.days-list {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+  }  
+}
+
+.day {
+  position: relative;
+  width: 33.33333%;
+}
+
+.day__title {
+  font-weight: bold;
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+  text-transform: uppercase;
+}
+
+.day__temperature {
+  font-weight: 600;
+  font-size: 8rem;
+  line-height: 9.8rem;
+  text-transform: uppercase;
+    &::after {
+      content: '°';
+      font-weight: bold;
+      text-transform: uppercase;
+      position: absolute;
+      top: +25px;
+    }
+}
+
+.day__image {
+  position: absolute;
+  top: 20px;
+  left: 110px;
+
+  @media screen and (max-width: 1024px) {
+    left: 80px;
+  }
+}
+
+.map {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    height: 60vw;
+  }
+}
+
+.map__image {
+  width: 100%;
+  height: 85%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.geo-coordinates {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: right;
+  text-transform: capitalize;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  border-radius: 10px;
+}

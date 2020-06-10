@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fancy Weather</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="preloader">
+    <div class="item-1"></div>
+    <div class="item-2"></div>
+    <div class="item-3"></div>
+    <div class="item-4"></div>
+    <div class="item-5"></div>
+  </div>
+
+  <header class="wrapper">
+    <div class="settings-block">
+      <div class="settings-block__refresh">
+        <div id="refresh-arrays"></div> 
+      </div>
+      <div class="settings-block__lang">
+        <ul class="lang-switcher">
+          <li>EN</li>
+        </ul>
+      </div>
+      <div class="settings-block__fc">
+          <div class="settings-block__fc_item settings-block__fahrenheit" id="fahrenheit">°F</div>
+          <div class="settings-block__fc_item settings-block__celsius active" id="celsius">°C</div>
+      </div>
+    </div>
+
+    <div class="search-block">
+      <form action="#" method="GET" class="search-block__form">
+        <input type="text" name="city" id="city" placeholder="Search city or ZIP" autocomplete="off">
+        <button type="button" id="search">Search</button>
+      </form>
+    </div>
+  </header>
+
+
+
+  <main class="wrapper main-wrapper">
+    <section class="forecast">
+      <div class="title">
+        <h1 class="title__city"></h1>
+        <h3 class="title__date">
+          <span class="forecast-title"></span>
+          <span id="forecast-day"></span>
+          <span id="forecast-month"></span>
+          <span id="forecast-time"></span>
+        </h3>
+      </div>
+
+      <div class="today">
+        <div class="today__temperature forecast-temperature"></div>
+        <div class="today__description" id="forecast-description">
+          <span class="today__condition" id="forecast-condition"></span><br>
+          <span id="forecast-feelslike"></span><br>
+          <span id="forecast-wind"></span><br>
+          <span id="forecast-humidity"></span>
+        </div>
+        <img class="today__image forecast-image" src="" alt="">
+      </div>
+
+      <div class="days">
+        <ul class="days-list">
+          <li class="day day-1">
+            <div class="day__title forecast-title"></div>
+            <div class="day__temperature forecast-temperature"></div>
+            <img class="day__image forecast-image" src="" alt="">
+          </li>
+          <li class="day day-2">
+            <div class="day__title forecast-title"></div>
+            <div class="day__temperature forecast-temperature"></div>
+            <img class="day__image forecast-image" src="" alt="">
+          </li>
+          <li class="day day-3">
+            <div class="day__title forecast-title"></div>
+            <div class="day__temperature forecast-temperature"></div>
+            <img class="day__image forecast-image" src="" alt="">
+          </li>          
+        </ul>
+      </div>
+    </section>
+
+    <section class="map">
+      <div class="map__image" id="map"></div>
+      <div class="geo-coordinates">
+        <p class="geo-coordinates__latitude"></p>
+        <p class="geo-coordinates__longitude"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=b456edb6-d61e-42d8-b468-f0c7e0c63be9"></script>
+  <script src="./dist/bundle.js"></script>
+</body>
+</html>

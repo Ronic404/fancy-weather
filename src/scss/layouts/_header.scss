@@ -1,0 +1,125 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.settings-block {
+  display: flex;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 10px;
+  }
+
+    &>div {
+      margin-right: 10px;
+      box-shadow: 0px 0px 3px 1px #888;
+    }
+}
+
+.settings-block__refresh {
+  width: 44px;
+  height: 44px;
+  background: url(../img/header/refresh-bg.png) no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  cursor: pointer; 
+
+  &:hover {
+    background-color:rgba(174, 181, 185, 0.7);
+  }
+  
+    div {
+      margin: 14px;
+      transition: 1s;
+      background-image: url(../img/header/refresh.svg);
+      width: 15px;
+      height: 20px;
+    }
+}
+
+.settings-block__lang {
+  width: 71px;
+  height: 44px;
+  background: rgba(174, 181, 185, 0.7);
+  border-radius: 5px;
+}
+
+.lang-switcher {
+  line-height: 44px;
+  text-align: center;
+}
+
+.settings-block__fc {
+  display: flex;
+  width: 88px;
+  height: 44px;
+  background: rgba(76, 82, 85, 0.4);
+  border-radius: 5px;
+  overflow: hidden;
+    div {
+      width: 50%;
+      text-align: center;
+      line-height: 44px;
+      &:hover {
+        background-color:rgba(174, 181, 185, 0.5);
+        cursor: pointer;
+      }
+    }
+}
+
+.active{
+  background-color:rgba(174, 181, 185, 1)
+}
+
+.search-block__form {
+  display: flex;
+}
+
+#city {
+  box-sizing: border-box;
+  width: 274px;
+  height: 44px;
+  background: rgba(76, 82, 85, 0.4);
+  border: 1px solid rgba(228, 227, 227, 0.2);
+  padding: 13px 15px;
+  border-radius: 5px 0 0 5px;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: white;
+
+  &::placeholder {
+    color: rgba($color: white, $alpha: .7);
+  }
+
+    &:focus {
+      outline: none;
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+}
+
+#search {
+  box-sizing: border-box;
+  width: 101px;
+  height: 44px;
+  background: rgba(174, 181, 185, 0.5);
+  border-radius: 0 5px 5px 0;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

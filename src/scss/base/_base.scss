@@ -1,0 +1,37 @@
+html {
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  text-shadow: 0 0 1px black;
+
+  @media screen and (max-width: 768px) {
+    font-size: 7px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  padding-bottom: 50px;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 57px;
+}
